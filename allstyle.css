@@ -15,5 +15,6 @@
 }
 
 canvas{
-    border:red solid 20px;
+    border:red solid 5px;
+    margin-top: 75px;
 }
