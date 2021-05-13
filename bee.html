@@ -13,9 +13,9 @@
         
      </head>
 
-    <body background="coolbg.jfif" style="background-size: cover;">
+    <body background="coolbg.png" style="background-size: cover;">
         <center>
-        <h3 class="h3fortheheadofcoolio">buss</h3><br>
+        <h3 class="h3fortheheadofcoolio">bee</h3><br>
         <h4 class="loo0kingornor">lookingforimg</h4><br><br>
         <div class="superdivdududuududu">
             <br>
@@ -34,8 +34,8 @@
             <br>
             <br>
             <br>
-        <h4>What is there??????? --------------> a buss and too many people to count</h4>
-        <h4>What i see will display here -----><span id="items">calculating</span></h4>
+        <h4>What is there??????? --------------> two bees and a flower</h4>
+        <h4>What i see will display here -----><span id="items"></span></h4>
         <a href="index.html"class="url">back</a>
         </div>
     </center>
@@ -57,7 +57,7 @@ coco = [];
 allitems = [];
 
 function preload(){
-    ImG = loadImage("buzy bees.jpg");
+    ImG = loadImage("bee.png");
 }
 
 function setup(){
@@ -80,15 +80,6 @@ function gotResult(error, results){
  }
     console.log(results); 
     coco = results;
-    
-            
-    for(i=0; i < coco.length; i++)
-    {
-        allitems.push(coco[i].label);
-
-        document.getElementById("items").innerHTML = allitems;
-            
-        }
 }
 
 function draw(){
@@ -107,7 +98,15 @@ function draw(){
             rect(coco[i].x,coco[i].y,coco[i].width,coco[i].height);
         }
         
-        
+        var j = 0;
+            
+            while(j < coco.length){
+
+                allitems.push(coco[i].label);
+
+                document.getElementById("items").innerHTML = allitems;
+            
+            }
     }
 }
 
