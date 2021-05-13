@@ -80,6 +80,16 @@ function gotResult(error, results){
  }
     console.log(results); 
     coco = results;
+
+    
+    for(i=0; i < coco.length; i++)
+    {
+        allitems.push(coco[i].label);
+
+        document.getElementById("items").innerHTML = allitems;
+            
+        }
+
 }
 
 function draw(){
@@ -97,16 +107,6 @@ function draw(){
             stroke("red");
             rect(coco[i].x,coco[i].y,coco[i].width,coco[i].height);
         }
-        
-        var j = 0;
-            
-            while(j < coco.length){
-
-                allitems.push(coco[i].label);
-
-                document.getElementById("items").innerHTML = allitems;
-            
-            }
     }
 }
 

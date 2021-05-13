@@ -80,6 +80,13 @@ function gotResult(error, results){
  }
     console.log(results); 
     coco = results;
+    for(i=0; i < coco.length; i++)
+    {
+        allitems.push(coco[i].label);
+
+        document.getElementById("items").innerHTML = allitems;
+            
+        }
 }
 
 function draw(){
